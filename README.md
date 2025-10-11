@@ -3,10 +3,12 @@
 ## Overview
 This contains C# classes that demontrate Algorithms and Data structures.
 
-### Algorithms
-- [BigONotation.cs](Algorithms/BigONotation.cs) - contains the O(1), O(n), and O(n²) methods.
+### [BigONotation.cs](Algorithms/BigONotation.cs)
+- contains the O(1), O(n), and O(n²) methods.
 
-### Shuffle
+#### [shuffle.cs](Algorithms/shuffle.cs)
+- The fisher yates method of shuffling. A an algorithm that gives every item an equal chance of appearing in any postion in the list.
+- 
 
 
 
