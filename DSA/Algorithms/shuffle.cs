@@ -1,4 +1,4 @@
-namespace Algorithms
+namespace DSA.Algorithms
 {
     public class Shuffle
     {
