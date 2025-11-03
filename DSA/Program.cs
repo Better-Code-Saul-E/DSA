@@ -39,11 +39,15 @@ namespace DSA
             List<int> duplicates = BigONotation.GetDuplicates(numbers);
             Console.WriteLine("The duplicates in numbers are: " + string.Join(",", duplicates));
 
+
+
             // Fisher Yates
             Console.WriteLine("\n===== Fisher Yates =====");
             Console.WriteLine("Original: " + string.Join(", ", orderedNumbers));
             Shuffle.FisherYates(orderedNumbers);
             Console.WriteLine("Fisher Yates: " + string.Join(", ", orderedNumbers));
+
+
 
             // LinkedList
             orderedNumbers.Sort();
@@ -97,6 +101,9 @@ namespace DSA
             Console.WriteLine($"\nFinal size: {list.Size}");
 
 
+
+
+
             // Array
             Console.WriteLine("\n===== Custom Array =====");
             CustomArray<int> arr = new CustomArray<int>();
@@ -130,6 +137,60 @@ namespace DSA
             Console.WriteLine("\nFinal Array:");
             arr.Print();
             Console.WriteLine($"\nFinal size: {arr.Size}");
+
+
+
+
+            //stack
+            Console.WriteLine("\n===== Custom Stack =====");
+            CustomStack<int> stack = new CustomStack<int>();
+            try
+            {
+                for (int i = 1; i <= 10; i++)
+                {
+                    stack.Push(i);
+                    Console.WriteLine($"Pushed: {i}, Size:{stack.Size}");
+                }
+                Console.WriteLine($"Top element: {stack.Peek()}");
+
+                while (!stack.IsEmpty())
+                {
+                    Console.WriteLine($"Popped: {stack.Pop()}, Size: {stack.Size}");
+                }
+            }
+            catch (InvalidOperationException ex)
+            {
+                Console.WriteLine(ex);
+            }
+
+
+
+
+            // Queue
+            Console.WriteLine("\n===== Custom Queue =====");
+            CustomQueue<string> queue = new CustomQueue<string>();
+
+            try
+            {
+                string[] names = { "saul", "sal", "sault", "sat", "aul" };
+
+                foreach (var name in names)
+                {
+                    queue.Enqueue(name);
+                    Console.WriteLine($"Enququed: {name}, Size: {queue.Size}");
+                }
+
+                Console.WriteLine($"Front: {queue.Peek()}");
+
+                while (!queue.IsEmpty())
+                {
+                    Console.WriteLine($"Deququed: {queue.Dequeue()}, Size: {queue.Size}");
+                }
+            } catch(InvalidOperationException ex)
+            {
+                Console.WriteLine(ex);
+            }
+
 
 
 
