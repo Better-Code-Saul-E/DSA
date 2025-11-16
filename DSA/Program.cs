@@ -3,6 +3,8 @@ using DSA.Algorithms;
 using DSA.DataStructures;
 
 
+/// make a  custom hanoi tower
+
 namespace DSA
 {
 
@@ -186,11 +188,52 @@ namespace DSA
                 {
                     Console.WriteLine($"Deququed: {queue.Dequeue()}, Size: {queue.Size}");
                 }
-            } catch(InvalidOperationException ex)
+            }
+            catch (InvalidOperationException ex)
             {
                 Console.WriteLine(ex);
             }
 
+
+            // Dictionary
+            Console.WriteLine("\n===== Custom Dictionary =====");
+            CustomDictionary<int, string> dict = new CustomDictionary<int, string>();
+
+            try
+            {
+                Console.WriteLine("\nAdding values:");
+                dict.Add(1, "one");
+                dict.Add(2, "two");
+                dict.Add(3, "three");
+                dict.Add(4, "four");
+                dict.Add(5, "five");
+
+                Console.WriteLine("Dictionary Count: " + dict.Size);
+                Console.WriteLine("Keys: " + string.Join(", ", dict.Keys()));
+                Console.WriteLine("Values: " + string.Join(", ", dict.Values()));
+
+                Console.WriteLine("\nChecking for keys and values");
+                Console.WriteLine("ContainsKey(3): " + dict.ContainsKey(3));
+                Console.WriteLine("ContainsValue(\"four\"): " + dict.ContainsValue("four"));
+
+                Console.WriteLine("\nRemoving: ");
+                dict.Remove(3);
+                Console.WriteLine("Removed key 3");
+                Console.WriteLine("ContainsKey(3): " + dict.ContainsKey(3));
+
+                Console.WriteLine("Count After Remove: " + dict.Size);
+                Console.WriteLine("Keys: " + string.Join(", ", dict.Keys()));
+                Console.WriteLine("Values: " + string.Join(", ", dict.Values()));
+
+                dict.Clear();
+                Console.WriteLine("Dictionary Cleared!");
+
+                Console.WriteLine("Final Count: " + dict.Size);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
 
 
