@@ -2,6 +2,10 @@ namespace DSA.Algorithms
 {
     public class Sorting
     {
+        /*
+        Bubble sort swifts through every pair in the list and compares.
+        if they are in the wrong order, it swaps them.
+        */
         public static void BubbleSort(List<int> integers)
         {
             int amount = integers.Count;
@@ -17,6 +21,12 @@ namespace DSA.Algorithms
                 }
             }
         }
+
+        /*
+        Insertion sort makes a sorted list one elemnt at a time
+        It takes the current element and inserts in into the position 
+        corrent position from what is already sorted
+        */
         public static void InsertionSort(List<int> integers)
         {
             for(int i = 1; i < integers.Count; i++)
@@ -32,6 +42,11 @@ namespace DSA.Algorithms
                 integers[j + 1] = key;
             }
         }
+
+        /*
+        Selection sort finds the smallest elemnt and swaps it
+        with an element of an unsorted section
+        */
         public static void SelectionSort(List<int> integers)
         {
             int amount = integers.Count;

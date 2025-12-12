@@ -1,7 +1,7 @@
 ﻿using System;
 using DSA.Algorithms;
 using DSA.DataStructures;
-
+using DSA.Maze;
 
 /// make a  custom hanoi tower
 
@@ -249,6 +249,11 @@ namespace DSA
 
 
 
+            Console.WriteLine("Do you want to play Maze? (y/n)");
+            string input = Console.ReadLine();
+            if( input == "y"){
+                AsciiMaze.Run();
+            }
 
 
 
