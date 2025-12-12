@@ -235,6 +235,20 @@ namespace DSA
                 Console.WriteLine(ex.Message);
             }
 
+            List<int> bubbleSorted = new List<int>(numbers);
+            Sorting.BubbleSort(bubbleSorted);
+            Console.WriteLine("Bubble Sort: " + string.Join(", ", bubbleSorted));
+
+            List<int> insertionSorted = new List<int>(numbers);
+            Sorting.BubbleSort(insertionSorted);
+            Console.WriteLine("Insertion Sort: " + string.Join(", ", insertionSorted));
+
+            List<int> selectionSorted = new List<int>(numbers);
+            Sorting.BubbleSort(selectionSorted);
+            Console.WriteLine("Selection Sort: " + string.Join(", ", selectionSorted));
+
+
+
 
 
 
